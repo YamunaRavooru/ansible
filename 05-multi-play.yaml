@@ -13,7 +13,7 @@
   - name: Play2 and task1
     ansible.builtin.debug:
      msg:"hellow from paly1 and task1"
-     
+
    - name: Play2 and task2
     ansible.builtin.debug:
-     msg:"hellow from paly1 and task1"   
+     msg:"hellow from paly2 and task2"   
