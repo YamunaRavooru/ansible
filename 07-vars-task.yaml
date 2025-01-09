@@ -5,6 +5,10 @@
     duration: 120hrs
     trainer: siva 
   tasks:
+  - name: ping
+    ansible.builtin.ping:
+      msg: "connecting the server by using ansible" 
+   
   - name: print the variables
     vars:
      course: ansible
