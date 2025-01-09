@@ -1,12 +1,16 @@
 - name: task variables
-  hosts: local
-  connection: local
+  hosts: web
   become: yes
   vars:
     course: "devops with aws"
     duration: 120hrs
     trainer: siva 
   tasks:
+  - name: ping the server
+    ansible.builtin.ping:
+      # ansible.builtin.debug:
+      # msg: "connecting the server by using ansible" 
+   
   - name: print the variables
     vars:
      course: ansible
