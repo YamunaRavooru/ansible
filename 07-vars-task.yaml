@@ -8,8 +8,8 @@
   tasks:
   - name: ping the server
     ansible.builtin.ping:
-      ansible.builtin.debug:
-      msg: "connecting the server by using ansible" 
+      # ansible.builtin.debug:
+      # msg: "connecting the server by using ansible" 
    
   - name: print the variables
     vars:
