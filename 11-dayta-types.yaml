@@ -2,15 +2,15 @@
   hosts: local
   connection: local
   vars:
-   Course: DevOps #string
-   Duration: 120 #int
-   topics: #list
-   - linux
-   - shell
-   - ansible
-   - aws
-   live: true #boolean
-   tools:
+    Course: DevOps #string
+    Duration: 120 #int
+    topics: #list
+    - linux
+    - shell
+    - ansible
+    - aws
+  live: true #boolean
+  tools:
     ci: jenkins
     cloud: aws
     containerization: docker
