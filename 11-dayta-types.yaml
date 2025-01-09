@@ -2,8 +2,8 @@
   hosts: local
   connection: local
   vars:
-  Course: DevOps #string
-  Duration: 120 #int
+   Course: DevOps #string
+   Duration: 120 #int
   topics: #list
   - linux
   - shell
@@ -13,7 +13,7 @@
   tools:
    ci: jenkins
    cloud: aws
-  containerization: docker
+   containerization: docker
   tasks:
   - name:  print course information
     ansible.builtin.debug:
