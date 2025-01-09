@@ -1,5 +1,6 @@
 - name: task variables
   hosts: web
+  become: yes
   vars:
     course: "devops with aws"
     duration: 120hrs
