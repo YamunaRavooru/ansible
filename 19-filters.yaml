@@ -1,6 +1,6 @@
 - name: filters
   hosts: local
-  conne tion: local
+  connetion: local
   tasks:
   - name: handle undefined variables
     ansible.builtin.debug: 
