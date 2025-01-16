@@ -19,7 +19,7 @@
         trainer: shivakumar
     ansible.builtin.debug:
       msg: "course info: {{ course  | dict2items }}"
-  - nmae: converting list to map
+  - name: converting list to map
     vars:
       courses:
       - {'key': 'name', 'value': 'devops with aws'}
