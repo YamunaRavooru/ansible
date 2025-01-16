@@ -19,3 +19,22 @@
         trainer: shivakumar
     ansible.builtin.debug:
       msg: "course info: {{ course  | dict2items }}"
+  - nmae: converting list to map
+    vars:
+      courses:
+      - {'key': 'name', 'value': 'devops with aws'}
+      - {'key': 'duration', 'value': '120hrs'}
+      - {'key': 'trainer', 'value': 'shivakumar'}
+    ansible.builtin.debug:
+      msg: "course info: {{ courses | items2dict }}"  
+  - name: converting upper to lower
+    vars:
+      name: "ShIvakumar Reddy"
+    ansible.builtin.debug:
+      msg: "Name: {{ name | lower }}"
+   - name: converting lower to upper
+    vars:
+      name: "ShIvakumar Reddy"
+    ansible.builtin.debug:
+      msg: "Name: {{ name | upper }}"
+
