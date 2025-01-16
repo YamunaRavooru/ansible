@@ -1,8 +1,8 @@
 - name: variables
   hosts: local
   connection: local
-  vars:
-   Greet: "PLAY"
+  # vars:
+  #  Greet: "PLAY"
   # vars_files:
   # - course.yaml
   # vars_prompt:
