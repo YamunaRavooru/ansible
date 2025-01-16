@@ -37,4 +37,13 @@
       name: "ShIvakumar Reddy M"
     ansible.builtin.debug:
       msg: "Name: {{ name | upper }}"
-
+  - name: finding max and min numbers
+    vars:
+      numbers: [ 2,45,89,567,98765 ]
+    ansible.builtin.debug:
+      msg: "{{ numbers | max }} and {{ numbers | min }}"
+  - name: checking ip adress is valid or not
+    vars:
+      ip: "1234.345.9.5"
+    ansible.builtin.debug:
+      msg: "ip: {{ ip | ansible.util.ipaddr }}"
