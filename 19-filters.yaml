@@ -29,12 +29,12 @@
       msg: "course info: {{ courses | items2dict }}"  
   - name: converting upper to lower
     vars:
-      name: "ShIvakumar Reddy"
+      name: "ShIvakumar Reddy M"
     ansible.builtin.debug:
-      msg: "Name: {{ name | lower }}"
+      msg: "hello: {{ name | lower }}"
    - name: converting lower to upper
     vars:
-      name: "ShIvakumar Reddy"
+      name: "ShIvakumar Reddy M"
     ansible.builtin.debug:
-      msg: "Name: {{ name | upper }}"
+      msg: "hello: {{ name | upper }}"
 
