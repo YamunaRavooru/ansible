@@ -31,10 +31,10 @@
     vars:
       name: "ShIvakumar Reddy M"
     ansible.builtin.debug:
-      msg: "hello: {{ name | lower }}"
-   - name: converting lower to upper
+      msg: "Name: {{ name | lower }}"
+  - name: converting lower to upper
     vars:
       name: "ShIvakumar Reddy M"
     ansible.builtin.debug:
-      msg: "hello: {{ name | upper }}"
+      msg: "Name: {{ name | upper }}"
 
