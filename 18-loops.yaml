@@ -1,6 +1,6 @@
 - name: Install packages
   hosts: web
-  bacome: yes
+  become: yes
   tasks:
   - name: Installing packages
     ansible.builtin.package:
@@ -9,5 +9,5 @@
     loop:
     - { name: 'git'  , state: 'present' }  
     - { name: 'gcc' ,  state: 'absent'}
-    - { name: 'mysql',  state: 'present'}
-    - { name: 'zip' ,   state: 'absent'}
+    - { name: 'mysql', state: 'present'}
+    - { name: 'zip' ,  state: 'absent'}
