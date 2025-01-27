@@ -6,6 +6,7 @@
     instance_type: t3.micro
     ami_id: ami-09c813fb71547fc4f
     subnet_id: subnet-0c680a8b4b29f54ed
+    zone: daws82s.cloud
     instance:
     - mysql
     - backend
@@ -27,10 +28,21 @@
       instance_type: "{{ instance_type }}"
     loop: "{{ instance }}"
     register: ec2_info
-  - name: print ec2_info
-    ansible.builtin.debug:
-      msg: "{{ ec2_info }}"
+  # - name: print ec2_info
+  #   ansible.builtin.debug:
+  #     msg: "{{ ec2_info }}"
   - name: print private ip addresses
     ansible.builtin.debug:
-     msg: "'{{ item.item}}'  : '{{ item.instances[0].private_ip_address }}'"
+     msg: "{{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results}}"
+  - name: create route53 record
+    amazon.aws.route53:
+      state: present
+      zone: "{{zone}}"
+      record: "{{item.item}}.{{zone}}"
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}"
+      wait: true
+      overwrite: true
+     loop: "{{ ec2_info.results}}"
