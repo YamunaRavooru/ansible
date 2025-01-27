@@ -10,7 +10,7 @@
     instance:
     - mysql
     - backend
-    - frontent
+    - frontend
   tasks:
   - name: aws python libraries
     ansible.builtin.pip:
