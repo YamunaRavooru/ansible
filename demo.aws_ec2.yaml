@@ -1,4 +1,4 @@
-plugin: amazon.aws.ec2_instance
+plugin: amazon.aws.ec2
 region:
  - us-east-1
 filters:
